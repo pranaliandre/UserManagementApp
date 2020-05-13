@@ -1,0 +1,12 @@
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\bin\Debug\netstandard2.0\UserManagementBL.deps.json
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\bin\Debug\netstandard2.0\UserManagementBL.dll
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\bin\Debug\netstandard2.0\UserManagementBL.pdb
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\bin\Debug\netstandard2.0\UserManagementCL.dll
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\bin\Debug\netstandard2.0\UserManagementCL.pdb
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\obj\Debug\netstandard2.0\UserManagementBL.csprojAssemblyReference.cache
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\obj\Debug\netstandard2.0\UserManagementBL.csproj.CoreCompileInputs.cache
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\obj\Debug\netstandard2.0\UserManagementBL.AssemblyInfoInputs.cache
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\obj\Debug\netstandard2.0\UserManagementBL.AssemblyInfo.cs
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\obj\Debug\netstandard2.0\UserManagementBL.csproj.CopyComplete
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\obj\Debug\netstandard2.0\UserManagementBL.dll
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\obj\Debug\netstandard2.0\UserManagementBL.pdb

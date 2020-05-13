@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "mpp0S1X0/Atg/97oYh6nmlg9ZpOEia54qqTA3faHobVBFGN6o9zkeG2NHCf+4OKT4/Te5fshXYZgXpzsVmeqvg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\intel\\source\\repos\\UserManagementApplication\\UserManagementRL\\UserManagementRL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\intel\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\intel\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\intel\\.nuget\\packages\\xunit.assert\\2.4.1\\xunit.assert.2.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}
