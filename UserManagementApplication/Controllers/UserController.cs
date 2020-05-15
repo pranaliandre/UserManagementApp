@@ -26,9 +26,27 @@ namespace UserManagementApplication.Controllers
             return Ok(new { original });
         }
         [HttpPost]
+        public IActionResult Return_Email(User model)
+        {
+            string original = user.Return_Email(model);
+            return Ok(new { original });
+        }
+        [HttpPost]
         public IActionResult Return_Password(User model)
         {
             string original = user.Return_Password(model);
+            return Ok(new { original });
+        }
+        [HttpPost]
+        public IActionResult Return_Mobile(User model)
+        {
+            string original = user.Return_Mobile(model);
+            return Ok(new { original });
+        }
+        [HttpPost]
+        public IActionResult Return_Address(User model)
+        {
+            string original = user.Return_Address(model);
             return Ok(new { original });
         }
     }
