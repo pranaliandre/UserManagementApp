@@ -1,67 +1,87 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Schema;
+﻿///-----------------------------------------------------------------
+///   Class:       UserRL
+///   Description: User Repository and database connectivity using ado.net
+///   Author:      Pranali Andre                   Date: 27/5/2020
+///-----------------------------------------------------------------
+using System;
+using System.Threading.Tasks;
 using UserManagementCL;
 using UserManagementRL.Interface;
-
+using System.Security.Cryptography.X509Certificates;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
+using Microsoft.Extensions.Configuration;
 namespace UserManagementRL.Services
 {
     public class UserRL : IUserRL
     {
-        /// <summary>
-        /// Method for Firstname
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
-        public string Return_FirstName(User model)
+        //Configration for database : Install package : using Microsoft.Extensions.Configration
+        private readonly IConfiguration configuration;
+        //Install package System.Data.SqlClient
+        private SqlConnection connection = null;
+        string constructor = null;
+        public UserRL(IConfiguration configuration)
         {
-            return "My_FirstName is" + model.FirstName;
+            this.configuration = configuration;
+        }
+
+        /// <summary>
+        /// Connection to database
+        /// </summary>
+        private void Connection()
+        {
+            try
+            {
+                //Call the connection string
+                constructor = configuration.GetSection("ConnectionStrings").GetSection("UserContext").Value;
+                connection = new SqlConnection(constructor);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
         }
         /// <summary>
-        /// Method for username
+        /// database connection for Registrion
         /// </summary>
-        /// <param name="model"></param>
+        /// <param name="data"></param>
         /// <returns></returns>
-        public string Return_LastName(User model)
+        public bool User_Register(User data)
         {
-            return "My_LastName is" + model.LastName;
-        }
-        /// <summary>
-        /// Method for emailid
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
-        public string Return_Email(User model)
-        {
-            return "My_Email is" + model.EmailId;
-        }
-        /// <summary>
-        /// Method for mobile
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
-        public string Return_Password(User model)
-        {
-            return "My_Password is " + model.Password;
-        }
-        /// <summary>
-        /// Method for Mobile number
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
-        public string Return_Mobile(User model)
-        {
-            return "My_Mobile is " + model.MobileNo;
-        }
-        /// <summary>
-        /// Method for Address
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
-        public string Return_Address(User model)
-        {
-            return "My_Address is " + model.Address;
+            try
+            {
+                // Connect to stored procedure and add in column
+                Connection();
+                //password encrption
+                string Password = EncryptedPassword.EncodePasswordToBase(data.Password);
+                SqlCommand command = new SqlCommand("spUserRegister", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@FirstName", data.FirstName);
+                command.Parameters.AddWithValue("@LastName", data.LastName);
+                command.Parameters.AddWithValue("@EmailId", data.EmailId);
+                command.Parameters.AddWithValue("@Password", Password);
+                command.Parameters.AddWithValue("@MobileNo", data.MobileNo);
+                command.Parameters.AddWithValue("@Gender", data.Gender);
+                command.Parameters.AddWithValue("@Address", data.Address);
+                // Open Connection UserRegisterManagement Table
+                connection.Open();
+                // Returns 1 for successful run and 0 For unsuccesful run
+                int response = command.ExecuteNonQuery();
+                connection.Close();
+                if (response != 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new Exception(exception.Message);
+            }
         }
     }
 }

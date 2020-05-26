@@ -1,7 +1,6 @@
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementCL\bin\Debug\netstandard2.0\UserManagementCL.deps.json
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementCL\bin\Debug\netstandard2.0\UserManagementCL.dll
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementCL\bin\Debug\netstandard2.0\UserManagementCL.pdb
-C:\Users\intel\source\repos\UserManagementApplication\UserManagementCL\obj\Debug\netstandard2.0\UserManagementCL.csprojAssemblyReference.cache
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementCL\obj\Debug\netstandard2.0\UserManagementCL.csproj.CoreCompileInputs.cache
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementCL\obj\Debug\netstandard2.0\UserManagementCL.AssemblyInfoInputs.cache
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementCL\obj\Debug\netstandard2.0\UserManagementCL.AssemblyInfo.cs

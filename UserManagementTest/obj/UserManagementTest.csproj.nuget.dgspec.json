@@ -107,6 +107,9 @@
             "projectReferences": {
               "C:\\Users\\intel\\source\\repos\\UserManagementApplication\\UserManagementCL\\UserManagementCL.csproj": {
                 "projectPath": "C:\\Users\\intel\\source\\repos\\UserManagementApplication\\UserManagementCL\\UserManagementCL.csproj"
+              },
+              "C:\\Users\\intel\\source\\repos\\UserManagementApplication\\UserManagementRL\\UserManagementRL.csproj": {
+                "projectPath": "C:\\Users\\intel\\source\\repos\\UserManagementApplication\\UserManagementRL\\UserManagementRL.csproj"
               }
             }
           }
@@ -185,6 +188,10 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "xunit.assert": {
               "target": "Package",
               "version": "[2.4.1, )"
@@ -242,11 +249,23 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
             },
             "xunit.assert": {
               "target": "Package",

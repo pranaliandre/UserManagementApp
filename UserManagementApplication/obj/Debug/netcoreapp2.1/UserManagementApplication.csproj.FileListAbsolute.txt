@@ -8,8 +8,10 @@ C:\Users\intel\source\repos\UserManagementApplication\UserManagementApplication\
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementApplication\bin\Debug\netcoreapp2.1\UserManagementApplication.pdb
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementApplication\bin\Debug\netcoreapp2.1\UserManagementBL.dll
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementApplication\bin\Debug\netcoreapp2.1\UserManagementCL.dll
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementApplication\bin\Debug\netcoreapp2.1\UserManagementRL.dll
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementApplication\bin\Debug\netcoreapp2.1\UserManagementBL.pdb
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementApplication\bin\Debug\netcoreapp2.1\UserManagementCL.pdb
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementApplication\bin\Debug\netcoreapp2.1\UserManagementRL.pdb
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementApplication\obj\Debug\netcoreapp2.1\UserManagementApplication.csprojAssemblyReference.cache
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementApplication\obj\Debug\netcoreapp2.1\UserManagementApplication.csproj.CoreCompileInputs.cache
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementApplication\obj\Debug\netcoreapp2.1\UserManagementApplication.RazorAssemblyInfo.cache

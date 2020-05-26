@@ -1,4 +1,9 @@
-﻿using System;
+﻿///-----------------------------------------------------------------
+///   Class:       UserController
+///   Description: User Management API for register,get by id
+///   Author:      Pranali Andre                   Date: 27/5/2020
+///-----------------------------------------------------------------
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +13,11 @@ using UserManagementBL.Interface;
 using UserManagementBL.Services;
 using UserManagementCL;
 using System.Collections.ObjectModel;
+using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
+using System.Runtime.InteropServices;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Configuration.Ini;
+using Microsoft.Extensions.Configuration;
 namespace UserManagementApplication.Controllers
 {
     [Route("api/[controller]")]
@@ -15,39 +25,40 @@ namespace UserManagementApplication.Controllers
     public class UserController: ControllerBase
     {
         public IUserBL user;
+
         public UserController(IUserBL user)
         {
             this.user = user;
         }
-        [HttpPost]
-        public IActionResult Return_Name(User model)
+        // // POST api/Register
+        [HttpPost("Register")]
+        /// <summary>
+        /// API for registration
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public IActionResult User_Register(User model)
         {
-            string original = user.Return_Name(model);
-            return Ok(new { original });
-        }
-        [HttpPost]
-        public IActionResult Return_Email(User model)
-        {
-            string original = user.Return_Email(model);
-            return Ok(new { original });
-        }
-        [HttpPost]
-        public IActionResult Return_Password(User model)
-        {
-            string original = user.Return_Password(model);
-            return Ok(new { original });
-        }
-        [HttpPost]
-        public IActionResult Return_Mobile(User model)
-        {
-            string original = user.Return_Mobile(model);
-            return Ok(new { original });
-        }
-        [HttpPost]
-        public IActionResult Return_Address(User model)
-        {
-            string original = user.Return_Address(model);
-            return Ok(new { original });
+            try
+            {
+                bool result = user.User_Register(model);
+                if (!result.Equals(null))
+                {
+                    var status = true;
+                    var message = "User Register Successfully.";
+                    return this.Ok(new { status, message });
+                }
+                else
+                {
+                    var status = false;
+                    var message = "User Register Unsuccessfully.";
+                    return this.BadRequest(new { status, message });
+                }
+            }
+            catch (Exception exception)
+            {
+                return BadRequest(new { error = exception.Message });
+            }
         }
     }
 }

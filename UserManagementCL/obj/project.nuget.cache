@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9bIhw0Te4OYnEploEfdYZ+6d8hMPAMJKXTDMtzBda1C4ajIc80CS9+wCS0a3qwGk2qAjBp2gZosmplrrJjTqIw==",
+  "dgSpecHash": "egXWeBI1nhQOD8Kg9lq09fFz830z7j5NWUB6VugBkIBlZeAgDiZd/mBbzOFmLee5RHs3wHyPQPzCQnpK2T26lQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\intel\\source\\repos\\UserManagementApplication\\UserManagementCL\\UserManagementCL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\intel\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\intel\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\intel\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\intel\\.nuget\\packages\\xunit.assert\\2.4.1\\xunit.assert.2.4.1.nupkg.sha512"
   ],
   "logs": []

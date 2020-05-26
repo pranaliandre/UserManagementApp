@@ -7,8 +7,8 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-
-namespace UserManagementApplication
+using UserManagementApplication;
+namespace UserManagementApplicationbn           
 {
     public class Program
     {

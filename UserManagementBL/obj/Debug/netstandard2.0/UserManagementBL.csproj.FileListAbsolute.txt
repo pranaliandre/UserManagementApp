@@ -2,7 +2,9 @@ C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\bin\Debug
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\bin\Debug\netstandard2.0\UserManagementBL.dll
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\bin\Debug\netstandard2.0\UserManagementBL.pdb
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\bin\Debug\netstandard2.0\UserManagementCL.dll
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\bin\Debug\netstandard2.0\UserManagementRL.dll
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\bin\Debug\netstandard2.0\UserManagementCL.pdb
+C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\bin\Debug\netstandard2.0\UserManagementRL.pdb
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\obj\Debug\netstandard2.0\UserManagementBL.csprojAssemblyReference.cache
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\obj\Debug\netstandard2.0\UserManagementBL.csproj.CoreCompileInputs.cache
 C:\Users\intel\source\repos\UserManagementApplication\UserManagementBL\obj\Debug\netstandard2.0\UserManagementBL.AssemblyInfoInputs.cache
