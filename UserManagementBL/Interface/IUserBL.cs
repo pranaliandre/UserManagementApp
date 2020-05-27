@@ -1,7 +1,7 @@
 ﻿///-----------------------------------------------------------------
 ///   Class:       IUserBL
 ///   Description: UserBL Interface for User
-///   Author:      Pranali Andre                  Date: 27/5/2020
+///   Author:      Pranali Andre                  Date: 28/5/2020
 ///-----------------------------------------------------------------
 using System;
 using System.Collections.Generic;
@@ -15,5 +15,7 @@ namespace UserManagementBL.Interface
     {
         //Interface method for User Registration
         bool User_Register(User model);
+        //Interface method for User Login
+        bool Login(LoginCL model);
     }
 }

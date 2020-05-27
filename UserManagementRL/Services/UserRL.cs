@@ -1,7 +1,7 @@
 ﻿///-----------------------------------------------------------------
 ///   Class:       UserRL
 ///   Description: User Repository and database connectivity using ado.net
-///   Author:      Pranali Andre                   Date: 27/5/2020
+///   Author:      Pranali Andre                   Date: 28/5/2020
 ///-----------------------------------------------------------------
 using System;
 using System.Threading.Tasks;
@@ -67,6 +67,41 @@ namespace UserManagementRL.Services
                 // Open Connection UserRegisterManagement Table
                 connection.Open();
                 // Returns 1 for successful run and 0 For unsuccesful run
+                int response = command.ExecuteNonQuery();
+                connection.Close();
+                if (response != 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new Exception(exception.Message);
+            }
+        }
+        /// <summary>
+        /// Email and Password to check it is correct or not.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public bool Login(LoginCL data)
+        {
+            try
+            {
+                string Password = EncryptedPassword.EncodePasswordToBase(data.Password);
+                //Connect to stored procedure and add in column
+                Connection();
+                SqlCommand command = new SqlCommand("spLoginUser", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@EmailId", data.EmailId);
+                command.Parameters.AddWithValue("@Password", Password);
+                // Open Connection UserDatails Table
+                connection.Open();
+                // Execute command
                 int response = command.ExecuteNonQuery();
                 connection.Close();
                 if (response != 1)

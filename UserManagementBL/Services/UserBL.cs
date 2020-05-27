@@ -1,7 +1,7 @@
 ﻿///-----------------------------------------------------------------
 ///   Class:       UserBL
 ///   Description: UserBL Services for User
-///   Author:      Pranali Andre                   Date: 27/5/2020
+///   Author:      Pranali Andre                   Date: 28/5/2020
 ///-----------------------------------------------------------------
 using System;
 using System.Collections.Generic;
@@ -31,6 +31,30 @@ namespace UserManagementBL.Services
             try
             {
                 var result = user.User_Register(model);
+                if (!result.Equals(null))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception exception)
+            {
+                throw new Exception(exception.Message);
+            }
+        }
+        /// <summary>
+        /// API for user login
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool Login(LoginCL model)
+        {
+            try
+            {
+                var result = user.Login(model);
                 if (!result.Equals(null))
                 {
                     return true;

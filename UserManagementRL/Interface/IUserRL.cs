@@ -1,7 +1,7 @@
 ﻿///-----------------------------------------------------------------
 ///   Class:       IUserRL
 ///   Description: Repository Layer Interface for user
-///   Author:      Pranali                   Date: 27/5/2020
+///   Author:      Pranali                   Date: 28/5/2020
 ///-----------------------------------------------------------------
 using System;
 using System.Collections.Generic;
@@ -15,5 +15,7 @@ namespace UserManagementRL.Interface
     {
         //Interface method for User Registration
         bool User_Register(User model);
+        //Interface method for User Login
+        bool Login(LoginCL model);
     }
 }

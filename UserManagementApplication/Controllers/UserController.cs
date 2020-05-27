@@ -1,7 +1,7 @@
 ﻿///-----------------------------------------------------------------
 ///   Class:       UserController
-///   Description: User Management API for register,get by id
-///   Author:      Pranali Andre                   Date: 27/5/2020
+///   Description: User Management API for register,Login,get by id
+///   Author:      Pranali Andre                   Date: 28/5/2020
 ///-----------------------------------------------------------------
 using System;
 using System.Collections.Generic;
@@ -52,6 +52,36 @@ namespace UserManagementApplication.Controllers
                 {
                     var status = false;
                     var message = "User Register Unsuccessfully.";
+                    return this.BadRequest(new { status, message });
+                }
+            }
+            catch (Exception exception)
+            {
+                return BadRequest(new { error = exception.Message });
+            }
+        }
+        // // POST api/Login
+        [HttpPost("Login")]
+        /// <summary>
+        /// API for User Login
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public IActionResult Login(LoginCL model)
+        {
+            try
+            {
+                bool result = user.Login(model);
+                if (!result.Equals(null))
+                {
+                    var status = true;
+                    var message = "User Login Successfully.";
+                    return this.Ok(new { status, message });
+                }
+                else
+                {
+                    var status = false;
+                    var message = "User Login Unsuccessfully.";
                     return this.BadRequest(new { status, message });
                 }
             }

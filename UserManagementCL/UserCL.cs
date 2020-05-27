@@ -1,7 +1,7 @@
 ﻿///-----------------------------------------------------------------
 ///   Class:       User
 ///   Description: Poco class for all User details
-///   Author:      Pranali Andre                   Date: 27/5/2020
+///   Author:      Pranali Andre                   Date: 28/5/2020
 ///-----------------------------------------------------------------
 using System;
 using System.Collections.Generic;
